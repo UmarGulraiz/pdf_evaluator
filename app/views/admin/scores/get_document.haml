@@ -1,0 +1,9 @@
+.p-5
+  %div.pb-4
+    = "Below is the score to #{@user.name}'s Document"
+  = form_for(@document, url: update_document_admin_score_path(@user.id), method: 'post') do |f|
+    = f.label "Score", class: "label label-default"
+    = f.number_field :score, in: 0.0..Document::TOTAL_SCORE, step: 0.1, class: "form-control mb-1 w-50"
+    %p.mb-4.blockquote-footer
+      = "score can range be between 0.0-#{Document::TOTAL_SCORE}"
+    = f.submit "Generate PDF", class: "btn btn-dark"

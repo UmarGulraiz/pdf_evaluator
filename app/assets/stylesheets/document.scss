@@ -1,0 +1,27 @@
+.name-title {
+  font-size: 30px;
+  font-weight: 900;
+}
+.name-container {
+  font-size: 30px;
+}
+
+.score-title {
+  font-size: 30px;
+  font-weight: 900;
+}
+.score-container {
+  font-size: 30px;
+}
+
+.printable-pdf-container {
+  padding: 3rem;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  .other-containers {
+    display: -webkit-box;
+    letter-spacing: -0.6px;
+  }
+
+}

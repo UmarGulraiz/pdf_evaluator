@@ -1,1 +1,11 @@
-Hello
+.p-5{style: "overflow: auto;"}
+  .d-flex.justify-content-center
+    %div
+      - if @document
+        %h4.mb-5
+          = "Below is #{current_user.name}'s document"
+        .pdf-container
+          = render 'user/documents/view_document', document: @document, layout: false
+      - else
+        %p
+          Your PDF certificate has not yet been generated, please wait until admin gives a score

@@ -1,0 +1,11 @@
+.printable-pdf-container
+  .other-containers
+    .name-title
+      Name:&nbsp;
+    .name-container
+      = document.name
+  .other-containers
+    .score-title
+      Score:&nbsp;
+    .score-container
+      = "#{document.score}/#{Document::TOTAL_SCORE}"
