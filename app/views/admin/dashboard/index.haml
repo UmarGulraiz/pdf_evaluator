@@ -1,0 +1,22 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th{:scope => "col"} #
+      %th{:scope => "col"} Name
+      %th{:scope => "col"} Email
+      %th{:scope => "col"} Score Given
+  %tbody
+    - @users.each_with_index do |user, index|
+      %tr.user-container
+        %th{:scope => "row"}
+          = index + 1
+        %td
+          = user.name
+        %td
+          = user.email
+        %td
+          .d-flex.justify-content-between
+            %div
+              = user.document&.score || 'none'
+            %div.update-score-container
+              = link_to "Update score", get_document_admin_score_path(user.id), class: "btn btn-primary hide-score-btn"

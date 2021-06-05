@@ -1,0 +1,8 @@
+- if flash.present?
+  .row-fluid.alerts
+    - flash.each do |name, message|
+      %div{:class => "alert alert-dismissible fade show #{flash_alert_class(name)} #{wrapper_class if local_assigns[:wrapper_class]}"}
+        .container
+          %button.close{"aria-label" => "Close", "data-dismiss" => "alert"}
+            %span{"aria-hidden" => "true"} ×
+          = message.html_safe

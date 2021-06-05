@@ -1,0 +1,12 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand{href: root_path} Pdf Evaluator
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+    %form.form-inline.my-2.my-lg-0
+    - if admin_signed_in?
+      = link_to "Log Out", destroy_admin_session_path, class: "btn btn-outline-danger my-2 my-sm-0", method: :delete
+    - else
+      = link_to "Log In", new_admin_session_path, class: "btn btn-outline-success my-2 my-sm-0"
+      = link_to "Sign Up", new_admin_registration_path, class: "btn btn-outline-info my-2 my-sm-0 ml-2"

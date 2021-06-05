@@ -1,0 +1,25 @@
+.pdf-container {
+  box-shadow: 0px 0px 3px 0px #000;
+  width: 750px;
+  height: 900px;
+}
+
+.update-score-container {
+  min-width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  a {
+    font-size: 1rem;
+    padding: 0px 15px;
+  }
+}
+
+.hide-score-btn {
+  display: none;
+}
+
+.user-container {
+  height: 52px;
+  align-items: center;
+}
